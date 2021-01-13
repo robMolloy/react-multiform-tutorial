@@ -7,8 +7,6 @@ const AllRoutes = () => {
   return (
     <>
       {config.pages.map((pagesData, j) => {
-        console.log(pagesData);
-
         return (
           <Route
             key={j}
