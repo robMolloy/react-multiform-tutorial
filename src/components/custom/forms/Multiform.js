@@ -14,9 +14,19 @@ const Method0 = () => {
     [uuid()]: getBlankCustomer(),
   });
 
+  const [
+    customerFormControlsState,
+    setCustomerFormControlsState,
+  ] = React.useState({});
+
   const [contactFormValuesState, setContactFormValuesState] = React.useState({
     [uuid()]: getBlankContact(),
   });
+
+  const [
+    contactFormControlsState,
+    setContactFormControlsState,
+  ] = React.useState({});
 
   const addCustomerForm = () => {
     // add a new customer to the state then set
@@ -43,23 +53,45 @@ const Method0 = () => {
     <Form>
       <div>
         <ButtonPrimary onClick={addCustomerForm}>Add Customer+</ButtonPrimary>
+        <ButtonPrimary onClick={() => console.log(customerFormControlsState)}>
+          log form controls
+        </ButtonPrimary>
       </div>
 
       <br />
 
       {Object.entries(customerFormValuesState).map(([id, customer]) => {
-        return <CustomerFormContent key={id} values={customer} />;
+        return (
+          <CustomerFormContent
+            key={id}
+            id={id}
+            values={customer}
+            formControls={customerFormControlsState}
+            setFormControls={setCustomerFormControlsState}
+          />
+        );
       })}
 
       <br />
 
       <div>
         <ButtonPrimary onClick={addContactForm}>Add Contact+</ButtonPrimary>
+        <ButtonPrimary onClick={() => console.log(contactFormControlsState)}>
+          log form controls
+        </ButtonPrimary>
       </div>
       <br />
 
       {Object.entries(contactFormValuesState).map(([id, contact]) => {
-        return <ContactFormContent key={id} values={contact} />;
+        return (
+          <ContactFormContent
+            key={id}
+            id={id}
+            values={contact}
+            formControls={contactFormControlsState}
+            setFormControls={setContactFormControlsState}
+          />
+        );
       })}
       <br />
 

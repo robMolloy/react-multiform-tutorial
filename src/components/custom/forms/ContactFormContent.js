@@ -29,60 +29,28 @@ const getDefaultFieldProps = ({ form, name }) => ({
 });
 
 const ContactFormContent = (props = {}) => {
-  // let id, values, formControls, setFormControls;
-  // ({ id, values, formControls, setFormControls } = props);
+  let values, id, formControls, setFormControls;
+  ({ id, formControls = {}, setFormControls, values = {} } = props);
 
   const form = useForm({ resolver: yupResolver(Schema), mode: "onChange" });
+
+  React.useEffect(() => {
+    formControls[id] = form;
+    setFormControls(formControls);
+  }, []);
   return (
     <>
       <GridContainer>
         <GridItem xs={12} sm={6}>
           <Input
             label="Type"
-            {...getDefaultFieldProps({ form, name: "type" })}
+            {...getDefaultFieldProps({ form, values, name: "type" })}
           />
         </GridItem>
         <GridItem xs={12} sm={6}>
           <Input
             label="Phone Number"
-            {...getDefaultFieldProps({ form, name: "phone_number" })}
-          />
-        </GridItem>
-        <GridItem
-          xs={12}
-          // sm={3}
-        >
-          <ButtonRow
-            array={[
-              <ButtonPrimary onClick={() => form.reset()}>reset</ButtonPrimary>,
-              <ButtonPrimary onClick={() => form.clearErrors()}>
-                clearErrors
-              </ButtonPrimary>,
-              <ButtonPrimary
-                onClick={() =>
-                  form.setError("type", {
-                    type: "manual",
-                    message: "errrrrrrooooooooaaaaarrrrr!",
-                  })
-                }
-              >
-                setError
-              </ButtonPrimary>,
-              <ButtonPrimary onClick={() => console.log(form.errors)}>
-                errors
-              </ButtonPrimary>,
-              <ButtonPrimary onClick={async () => await form.trigger()}>
-                trigger
-              </ButtonPrimary>,
-              <ButtonPrimary
-                onClick={async () => await form.setValue("type", "mobile")}
-              >
-                setValue
-              </ButtonPrimary>,
-              <ButtonPrimary onClick={() => console.log(form.getValues())}>
-                getValues
-              </ButtonPrimary>,
-            ]}
+            {...getDefaultFieldProps({ form, values, name: "phone_number" })}
           />
         </GridItem>
       </GridContainer>

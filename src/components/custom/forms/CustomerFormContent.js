@@ -31,17 +31,19 @@ const getDefaultFieldProps = ({ form, values = {}, name }) => ({
 });
 
 const CustomerFormContent = (props = {}) => {
-  // id, formControls, setFormControls;
-  // id, , formControls, setFormControls
-
-  let values;
-  ({ values = {} } = props);
+  let values, id, formControls, setFormControls;
+  ({ id, formControls = {}, setFormControls, values = {} } = props);
 
   const form = useForm({
     resolver: yupResolver(Schema),
     mode: "onChange",
     defaultValues: values,
   });
+
+  React.useEffect(() => {
+    formControls[id] = form;
+    setFormControls(formControls);
+  }, []);
 
   return (
     <>
@@ -56,43 +58,6 @@ const CustomerFormContent = (props = {}) => {
           <Input
             label="Last Name"
             {...getDefaultFieldProps({ form, values, name: "last_name" })}
-          />
-        </GridItem>
-        <GridItem
-          xs={12}
-          // sm={3}
-        >
-          <ButtonRow
-            array={[
-              <ButtonPrimary onClick={() => form.reset()}>reset</ButtonPrimary>,
-              <ButtonPrimary onClick={() => form.clearErrors()}>
-                clearErrors
-              </ButtonPrimary>,
-              <ButtonPrimary
-                onClick={() =>
-                  form.setError("first_name", {
-                    type: "manual",
-                    message: "errrrrrrooooooooaaaaarrrrr!",
-                  })
-                }
-              >
-                setError
-              </ButtonPrimary>,
-              <ButtonPrimary onClick={() => console.log(form.errors)}>
-                errors
-              </ButtonPrimary>,
-              <ButtonPrimary onClick={async () => await form.trigger()}>
-                trigger
-              </ButtonPrimary>,
-              <ButtonPrimary
-                onClick={async () => await form.setValue("first_name", "silad")}
-              >
-                setValue
-              </ButtonPrimary>,
-              <ButtonPrimary onClick={() => console.log(form.getValues())}>
-                getValues
-              </ButtonPrimary>,
-            ]}
           />
         </GridItem>
       </GridContainer>
