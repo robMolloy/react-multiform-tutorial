@@ -47,6 +47,9 @@ const Method0 = () => {
   const resetForms = () => {
     setContactFormValuesState({});
     setCustomerFormValuesState({});
+
+    setContactFormControlsState({});
+    setCustomerFormControlsState({});
   };
 
   return (
