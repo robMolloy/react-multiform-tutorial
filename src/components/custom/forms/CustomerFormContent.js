@@ -1,7 +1,5 @@
 import React from "react";
-import ButtonPrimary from "../../generic/buttons/ButtonPrimary";
 import GridContainer from "../../generic/grids/GridContainer";
-import ButtonRow from "../../generic/grids/ButtonRow";
 import GridItem from "../../generic/grids/GridItem";
 import Input from "../../generic/fields/Input";
 
