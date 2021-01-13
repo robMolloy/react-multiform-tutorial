@@ -18,14 +18,14 @@ const Method0 = () => {
     [uuid()]: getBlankContact(),
   });
 
-  const addCustomer = () => {
+  const addCustomerForm = () => {
     // add a new customer to the state then set
     customerFormValuesState[uuid()] = getBlankCustomer();
     setCustomerFormValuesState(customerFormValuesState);
   };
 
-  const addContact = () => {
-    // add a new customer to the state
+  const addContactForm = () => {
+    // add a new customer to the state then set
     contactFormValuesState[uuid()] = getBlankContact();
     setContactFormValuesState(contactFormValuesState);
   };
@@ -38,7 +38,7 @@ const Method0 = () => {
   return (
     <Form>
       <div>
-        <ButtonPrimary onClick={addCustomer}>Add Customer+</ButtonPrimary>
+        <ButtonPrimary onClick={addCustomerForm}>Add Customer+</ButtonPrimary>
       </div>
 
       <br />
@@ -50,7 +50,7 @@ const Method0 = () => {
       <br />
 
       <div>
-        <ButtonPrimary onClick={addContact}>Add Contact+</ButtonPrimary>
+        <ButtonPrimary onClick={addContactForm}>Add Contact+</ButtonPrimary>
       </div>
       <br />
 
