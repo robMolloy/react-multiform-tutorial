@@ -52,43 +52,48 @@ const Method0 = () => {
     setCustomerFormControlsState({});
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
-    let customerValid = Object.values(customerFormControlsState).every(
-      async (formControls) => {
-        await formControls.trigger();
-        const valid = Object.keys(formControls.errors).length === 0;
-        return valid;
-      }
-    );
+    if (await isValid()) onValid();
+    else onInvalid();
+  };
 
-    let contactValid = Object.values(contactFormControlsState).every(
-      async (formControls) => {
-        await formControls.trigger();
-        const valid = Object.keys(formControls.errors).length === 0;
-        return valid;
-      }
-    );
+  const isValid = async () => {
+    let customerValid = true;
+    let contactValid = true;
 
-    if (contactValid && customerValid) {
-      // doSomething()
-
-      Object.entries(customerFormControlsState).forEach(
-        ([id, formControls]) => {
-          customerFormValuesState[id] = formControls.getValues();
-        }
-      );
-      Object.entries(contactFormControlsState).forEach(([id, formControls]) => {
-        contactFormValuesState[id] = formControls.getValues();
-      });
-
-      console.log(customerFormValuesState, contactFormValuesState);
-
-      resetForms();
-    } else {
-      // doSomethingElse()
+    for (const formControls of Object.values(customerFormControlsState)) {
+      await formControls.trigger();
+      const valid = Object.keys(formControls.errors).length === 0;
+      if (!valid) customerValid = false;
     }
+
+    for (const formControls of Object.values(contactFormControlsState)) {
+      await formControls.trigger();
+      const valid = Object.keys(formControls.errors).length === 0;
+      if (!valid) contactValid = false;
+    }
+
+    return contactValid && customerValid;
+  };
+
+  const onValid = async () => {
+    Object.entries(customerFormControlsState).forEach(([id, formControls]) => {
+      customerFormValuesState[id] = formControls.getValues();
+    });
+    Object.entries(contactFormControlsState).forEach(([id, formControls]) => {
+      contactFormValuesState[id] = formControls.getValues();
+    });
+
+    console.log(customerFormValuesState, contactFormValuesState);
+
+    resetForms();
+  };
+
+  const onInvalid = async () => {
+    //nada
+    console.log("u wot m8");
   };
 
   return (
