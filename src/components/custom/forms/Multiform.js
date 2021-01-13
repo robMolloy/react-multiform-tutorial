@@ -52,8 +52,47 @@ const Method0 = () => {
     setCustomerFormControlsState({});
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    let customerValid = Object.values(customerFormControlsState).every(
+      async (formControls) => {
+        await formControls.trigger();
+        const valid = Object.keys(formControls.errors).length === 0;
+        return valid;
+      }
+    );
+
+    let contactValid = Object.values(contactFormControlsState).every(
+      async (formControls) => {
+        await formControls.trigger();
+        const valid = Object.keys(formControls.errors).length === 0;
+        return valid;
+      }
+    );
+
+    if (contactValid && customerValid) {
+      // doSomething()
+
+      Object.entries(customerFormControlsState).forEach(
+        ([id, formControls]) => {
+          customerFormValuesState[id] = formControls.getValues();
+        }
+      );
+      Object.entries(contactFormControlsState).forEach(([id, formControls]) => {
+        contactFormValuesState[id] = formControls.getValues();
+      });
+
+      console.log(customerFormValuesState, contactFormValuesState);
+
+      resetForms();
+    } else {
+      // doSomethingElse()
+    }
+  };
+
   return (
-    <Form>
+    <Form onSubmit={(e) => onSubmit(e)}>
       <div>
         <ButtonPrimary onClick={addCustomerForm}>Add Customer+</ButtonPrimary>
         <ButtonPrimary onClick={() => console.log(customerFormControlsState)}>
@@ -102,6 +141,11 @@ const Method0 = () => {
         <ButtonPrimary color="secondary" onClick={resetForms}>
           Reset Forms
         </ButtonPrimary>
+      </div>
+      <br />
+
+      <div>
+        <ButtonPrimary type="submit">Submit</ButtonPrimary>
       </div>
     </Form>
   );
