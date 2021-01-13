@@ -21,13 +21,17 @@ const Method0 = () => {
   const addCustomerForm = () => {
     // add a new customer to the state then set
     customerFormValuesState[uuid()] = getBlankCustomer();
-    setCustomerFormValuesState(customerFormValuesState);
+
+    //new javascript object required to force another render
+    setCustomerFormValuesState({ ...customerFormValuesState });
   };
 
   const addContactForm = () => {
     // add a new customer to the state then set
     contactFormValuesState[uuid()] = getBlankContact();
-    setContactFormValuesState(contactFormValuesState);
+
+    //new javascript object required to force another render
+    setContactFormValuesState({ ...contactFormValuesState });
   };
 
   const resetForms = () => {
