@@ -1,6 +1,4 @@
 import React from "react";
-import ButtonPrimary from "../../generic/buttons/ButtonPrimary";
-import ButtonRow from "../../generic/grids/ButtonRow";
 import GridContainer from "../../generic/grids/GridContainer";
 import GridItem from "../../generic/grids/GridItem";
 import Input from "../../generic/fields/Input";
@@ -37,7 +35,7 @@ const ContactFormContent = (props = {}) => {
   React.useEffect(() => {
     formControls[id] = form;
     setFormControls(formControls);
-  }, []);
+  });
   return (
     <>
       <GridContainer>

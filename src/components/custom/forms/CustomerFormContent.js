@@ -43,7 +43,7 @@ const CustomerFormContent = (props = {}) => {
   React.useEffect(() => {
     formControls[id] = form;
     setFormControls(formControls);
-  }, []);
+  });
 
   return (
     <>
