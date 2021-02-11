@@ -9,7 +9,7 @@ function App() {
   const Index = Home;
 
   return (
-    <Router basename={`${process.env.REACT_APP_PUBLIC_PATH ?? ""}`}>
+    <Router basename={process.env.REACT_APP_PUBLIC_PATH ?? ""}>
       <div className="App">
         <NavBars imgSrc="logo.svg" />
         <main>
