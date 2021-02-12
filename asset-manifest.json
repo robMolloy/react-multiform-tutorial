@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/static/js/main.4517267a.chunk.js",
-    "main.js.map": "/static/js/main.4517267a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.acfdfae3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.acfdfae3.js.map",
-    "static/js/2.fb5c2d6b.chunk.js": "/static/js/2.fb5c2d6b.chunk.js",
-    "static/js/2.fb5c2d6b.chunk.js.map": "/static/js/2.fb5c2d6b.chunk.js.map",
-    "static/js/3.ede0c746.chunk.js": "/static/js/3.ede0c746.chunk.js",
-    "static/js/3.ede0c746.chunk.js.map": "/static/js/3.ede0c746.chunk.js.map",
-    "index.html": "/index.html",
-    "service-worker.js": "/service-worker.js",
-    "service-worker.js.map": "/service-worker.js.map",
-    "static/css/main.8c8b27cf.chunk.css.map": "/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.fb5c2d6b.chunk.js.LICENSE.txt": "/static/js/2.fb5c2d6b.chunk.js.LICENSE.txt"
+    "main.css": "https://robmolloy.github.io/react-multiform-tutorial/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "https://robmolloy.github.io/react-multiform-tutorial/static/js/main.a4db8073.chunk.js",
+    "main.js.map": "https://robmolloy.github.io/react-multiform-tutorial/static/js/main.a4db8073.chunk.js.map",
+    "runtime-main.js": "https://robmolloy.github.io/react-multiform-tutorial/static/js/runtime-main.0dfd2d8b.js",
+    "runtime-main.js.map": "https://robmolloy.github.io/react-multiform-tutorial/static/js/runtime-main.0dfd2d8b.js.map",
+    "static/js/2.fb5c2d6b.chunk.js": "https://robmolloy.github.io/react-multiform-tutorial/static/js/2.fb5c2d6b.chunk.js",
+    "static/js/2.fb5c2d6b.chunk.js.map": "https://robmolloy.github.io/react-multiform-tutorial/static/js/2.fb5c2d6b.chunk.js.map",
+    "static/js/3.ede0c746.chunk.js": "https://robmolloy.github.io/react-multiform-tutorial/static/js/3.ede0c746.chunk.js",
+    "static/js/3.ede0c746.chunk.js.map": "https://robmolloy.github.io/react-multiform-tutorial/static/js/3.ede0c746.chunk.js.map",
+    "index.html": "https://robmolloy.github.io/react-multiform-tutorial/index.html",
+    "service-worker.js": "https://robmolloy.github.io/react-multiform-tutorial/service-worker.js",
+    "service-worker.js.map": "https://robmolloy.github.io/react-multiform-tutorial/service-worker.js.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "https://robmolloy.github.io/react-multiform-tutorial/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.fb5c2d6b.chunk.js.LICENSE.txt": "https://robmolloy.github.io/react-multiform-tutorial/static/js/2.fb5c2d6b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.acfdfae3.js",
+    "static/js/runtime-main.0dfd2d8b.js",
     "static/js/2.fb5c2d6b.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.4517267a.chunk.js"
+    "static/js/main.a4db8073.chunk.js"
   ]
 }
