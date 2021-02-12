@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "https://robmolloy.github.io/multiform-tutorial/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "https://robmolloy.github.io/multiform-tutorial/static/js/main.db491e2c.chunk.js",
-    "main.js.map": "https://robmolloy.github.io/multiform-tutorial/static/js/main.db491e2c.chunk.js.map",
-    "runtime-main.js": "https://robmolloy.github.io/multiform-tutorial/static/js/runtime-main.8ec25a76.js",
-    "runtime-main.js.map": "https://robmolloy.github.io/multiform-tutorial/static/js/runtime-main.8ec25a76.js.map",
-    "static/js/2.a8efd301.chunk.js": "https://robmolloy.github.io/multiform-tutorial/static/js/2.a8efd301.chunk.js",
-    "static/js/2.a8efd301.chunk.js.map": "https://robmolloy.github.io/multiform-tutorial/static/js/2.a8efd301.chunk.js.map",
-    "static/js/3.a21e376f.chunk.js": "https://robmolloy.github.io/multiform-tutorial/static/js/3.a21e376f.chunk.js",
-    "static/js/3.a21e376f.chunk.js.map": "https://robmolloy.github.io/multiform-tutorial/static/js/3.a21e376f.chunk.js.map",
-    "index.html": "https://robmolloy.github.io/multiform-tutorial/index.html",
-    "service-worker.js": "https://robmolloy.github.io/multiform-tutorial/service-worker.js",
-    "service-worker.js.map": "https://robmolloy.github.io/multiform-tutorial/service-worker.js.map",
-    "static/css/main.8c8b27cf.chunk.css.map": "https://robmolloy.github.io/multiform-tutorial/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.a8efd301.chunk.js.LICENSE.txt": "https://robmolloy.github.io/multiform-tutorial/static/js/2.a8efd301.chunk.js.LICENSE.txt"
+    "main.css": "/multiform-tutorial/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/multiform-tutorial/static/js/main.5039315d.chunk.js",
+    "main.js.map": "/multiform-tutorial/static/js/main.5039315d.chunk.js.map",
+    "runtime-main.js": "/multiform-tutorial/static/js/runtime-main.4c7819aa.js",
+    "runtime-main.js.map": "/multiform-tutorial/static/js/runtime-main.4c7819aa.js.map",
+    "static/js/2.a8efd301.chunk.js": "/multiform-tutorial/static/js/2.a8efd301.chunk.js",
+    "static/js/2.a8efd301.chunk.js.map": "/multiform-tutorial/static/js/2.a8efd301.chunk.js.map",
+    "static/js/3.a21e376f.chunk.js": "/multiform-tutorial/static/js/3.a21e376f.chunk.js",
+    "static/js/3.a21e376f.chunk.js.map": "/multiform-tutorial/static/js/3.a21e376f.chunk.js.map",
+    "index.html": "/multiform-tutorial/index.html",
+    "service-worker.js": "/multiform-tutorial/service-worker.js",
+    "service-worker.js.map": "/multiform-tutorial/service-worker.js.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/multiform-tutorial/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.a8efd301.chunk.js.LICENSE.txt": "/multiform-tutorial/static/js/2.a8efd301.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ec25a76.js",
+    "static/js/runtime-main.4c7819aa.js",
     "static/js/2.a8efd301.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.db491e2c.chunk.js"
+    "static/js/main.5039315d.chunk.js"
   ]
 }
